@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Tour</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>  
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="./images/tra1.mp4" type="video/mp4">
+      </video>
+    <header class="header">
+       <!-- <a href="#" class="logo">A&N TOUR AND TRAVELS</a>-->
+       <img src="./images/logo.png" style="height: 100px;width: 100px;">
+        <nav class="navbar">
+            <a href="index.html" style="--i:1;">Home</a>
+            <a href="package.html" style="--i:2;">Package</a>
+            <a href="about1.html" style="--i:3;">About Us</a>
+            <a href="contact.html" style="--i:4;">Contact</a>
+            <a href="bookings.html" style="--i:4;">Book</a>
+            <a id="Logout-btn" href="#"  style="--i:4;">logout</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h3>Hello,Welcome to</h3>
+            <h1>A & N Travel Company</h1><br>
+            <p>Our company is familiar with adventure of trip to relaxing travel So here we are to bring you a modern,comfortable and make your tour unforgettable </br>whether you want to travel to desert or the mountains,we provide with the best services.</p>    
+           <br><br> <a href="package.html" class="btnn">Explore</a>
+           
+           <form class="form" id="login-form">
+            <div>
+                <label for="username" style="color: white;">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="password"  style="color: white;">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <input type="submit" value="Login" class="btn"><br><br>
+            <p style="color: white;">Don't have an account? </p>
+            <p><a href="#" id="clickreg" style="align-items: center;">Register here</a></p>
+            </form>
+
+
+            <form class="form" method="post" id="register-form" style="display: none;">
+                <h2>Register</h2>
+                <div>
+                    <label for="username" style="color: white;">Username:</label>
+                    <input type="text" id="reg-username" name="username" required>
+                </div>
+                <div>
+                    <label for="password" style="color: white;">Password:</label>
+                    <input type="password" id="reg-password" name="password" required>
+                </div>
+                <div>
+                    <label for="password" style="color: white;">Phone Number:</label>
+                    <input type="text" id="phone" name="phone" required>
+                </div>
+                <input type='hidden' name='redirect_to' value='/' />
+                <button type="submit" class="btn">Register</button>
+                <p><a href="#" id="clickalgaccount" style="align-items: center; "color: white;">Already have account?</a></p>
+            </form>
+        </div>    
+    </section>
+    </br>
+    <section class="package" id="package">
+        <h1 class="heading" style="text-align: center;">Package</h1>
+            
+        <div class="box-container">
+            
+            <div class="box">
+                <img src="./images/munn.jpg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Munnar</h3>
+                    <p>Munnar Tour Packages starting </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">28,000Rs.<span>Rs.30,000</span></div>
+                    <a href="munn2.html" class="btnn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./images/che1.jpg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Madhurai,Tamil Nadu</h3>
+                    <p>Madhurai,Tamil Nadu Tour Packages starting</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">Rs.32,500<span>Rs.36,500</span></div>
+                    <a href="madhu2.html" class="btnn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./images/andm.jpg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Andaman</h3>
+                    <p>Andaman Tour Packages starting</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">Rs.24,500<span>Rs.26,300</span></div>
+                    <a href="andaman2.html" class="btnn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./images/kash.jpg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Kashmir</h3>
+                    <p>Kashmir Tour Packages starting</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">Rs.38,999<span>Rs.43,500</span></div>
+                    <a href="#" class="btnn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./images/laksh.jpg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Lakshadweep</h3>
+                    <p>Lakshadweep Tour Packages starting</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">Rs.18,000<span>Rs.25,000</span></div>
+                    <a href="#" class="btnn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./images/amrit.jpg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Amritsar</h3>
+                    <p>Amritsar Tour Packages starting </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">Rs.29,000<span>Rs.32,500</span></div>
+                    <a href="#" class="btnn">book now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</br>
+    <section class="about">
+      <div class="about-section">
+        <div class="inner-container">
+          <h1>About us</h1>
+           <p class="text">
+            At A & N Travel,we believe that travel should be sustainable and responsible.we are committed to minimizing our impact on the environment and supporting local communities wherever we go. we also believe in providing our customer with exceptional services every step of the way.
+           </p>
+           <div class="skill">
+            <span>AKSHATA UMAGOL</span>
+            <span>NUTAN SATHE</span>
+            
+           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+        <h2>Travel with us <br> go everywhere</h2>
+        <a href="contact.html" class="btnn">let's talk</a>
+    </section> 
+
+    <section class="footer">
+        <div class="row">
+            <div class="col">
+                <p style="font-weight: bold; margin-left: 15%;">A & N Travel Company</p>
+                <p style= "margin-left: 15%;">Looking to explore the world? We can help you with 'just' what you've been looking for. Call/Whatsapp our travel agents to gain the best travel experience there is on +91-7827956056</p>
+            </div>
+            <div class="col">
+                <h3>Office</h3>
+                <p>Gadiys estate</p>
+                <p>nandanvan socirtet</p>
+                <p class="email-id">akshata@gmail.com</p>
+                <p>+91 - 23455334566</p>
+            </div>
+            <div class="col">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="package.html">Package</a></li>
+                    <li><a href="about1.html">About us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="bookings.html">Book</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Newsletter</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email id" required>
+                    <button type="submit" class="btnn">submit</button>
+                    </form>
+            </form>
+            </div>
+
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/api.js"></script>
+    <script src="main.js"></script>
+    <!--<h1>Login</h1>
+    <form action="/login" method="post">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <input type="submit" value="Login">
+    </form>
+    <p>Don't have an account? <a href="/register">Register here</a></p>-->
+</body>
+</html>

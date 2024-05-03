@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style= "background: linear-gradient(90deg,wheat,white,wheat);">
+    <header class="header">
+        <!-- <a href="#" class="logo">A&N TOUR AND TRAVELS</a>-->
+        <img src="./images/logo.png" style="height: 100px;width: 100px;">
+         <nav class="navbar">
+             <a href="admin.html" style="--i:1;">Home</a>
+             <a href="logindetails.html" style="--i:2;">LoginDetails</a>
+             <a href="bookingdetails.html" style="--i:3;">BookingDetails</a>
+             <a href="paymentdetails.html" style="--i:4;">PaymentDetails</a>
+         </nav>
+     </header>
+     <h1 style="text-align: center; margin-top: 10%;">Bookings Details</h1>
+    <table id="userTable" border="1" class="center" width="70%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Package</th>
+                <th>Number of People</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody id="userList"></tbody>
+    </table>
+
+    <script>
+        // Fetch user data from the server
+        fetch('/bookingList')
+            .then(response => response.json())
+            .then(data => {
+                // Display user data in the table
+                const userList = document.getElementById('userList');
+
+                data.forEach(user => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td  style="height: 40px ;text-align: center;vertical-align: middle;">${user.id}</td>
+                        <td  style="height: 40px ;text-align: center;vertical-align: middle;">${user.name}</td>
+                        <td  style="height: 40px ;text-align: center;vertical-align: middle;">${user.phone}</td>
+                        <td  style="height: 40px ;text-align: center;vertical-align: middle;">${user.email}</td>
+                        <td  style="height: 40px ;text-align: center;vertical-align: middle;">${user.package}</td>
+                        <td  style="height: 40px ;text-align: center;vertical-align: middle;">${user.num_people}</td>
+                        <td  style="height: 40px ;text-align: center;vertical-align: middle;">${user.message}</td>`;
+                    userList.appendChild(row);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching user data:', error);
+            });
+    </script>
+    
+    <!-- Add any additional content or styling as needed -->
+</body>
+</html>
+
